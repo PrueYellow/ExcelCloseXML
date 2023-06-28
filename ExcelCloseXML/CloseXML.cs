@@ -32,9 +32,9 @@ namespace ExcelCloseXML
                     //抓取時間位置並轉格式
                     string cellValue = column == 3 ? worksheet.Cell(row, column).GetDateTime().ToString("yyyy/MM/dd") : worksheet.Cell(row, column).GetString();
 
-                    var fuckingGay = $"{basicdata} {cellValue}";
+                    var BookItem = $"{basicdata} {cellValue}";
 
-                    Console.WriteLine(fuckingGay);
+                    Console.WriteLine(BookItem);
                 }
                 Console.WriteLine();
             }
