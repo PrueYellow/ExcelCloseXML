@@ -41,6 +41,23 @@ namespace ExcelCloseXML
                 }
                 Console.WriteLine();
             }
+            for (int row = 2; row <= rowCount; row++)
+            {
+                for (int column = 1; column <= columnCount; column++)
+                {
+                    var basicdata = worksheet.Cell(1, column).Value.ToString();
+
+                    //抓取時間位置並轉格式
+                    string cellValue = column == 3 ? worksheet.Cell(row, column).GetDateTime().ToString("yyyy/MM/dd") : worksheet.Cell(row, column).GetString();
+
+                    var BookItem = $"{basicdata} {cellValue}";
+
+                    Console.WriteLine(BookItem);
+                }
+                Console.WriteLine();
+            }
+
+
 
 
 
